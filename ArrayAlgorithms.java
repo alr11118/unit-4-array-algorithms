@@ -78,19 +78,24 @@ public class ArrayAlgorithms {
    public int longestContiguousSubarray() {
       // UWHS ONLY:
       // Return the length of the longest strictly increasing contiguous segment
-      int counter = 0;
+      int counter = 1;
+      int longestLength = 0;
       for(int i = 1; i < intArray.length; i++)
       {
          if(intArray[i] > intArray[i-1])
          {
             counter += 1;
+            if(counter > longestLength)
+            {
+               longestLength = counter;
+            }
          }
          else
          {
             counter = 0;
          }
       }
-      return counter;
+      return longestLength;
    }
 
    public int[] moveZeroesToEnd() {
@@ -140,5 +145,15 @@ public class ArrayAlgorithms {
       System.out.println("longestContiguousSubarray method: " + arrayAlgorithms.longestContiguousSubarray());
       System.out.println("moveZeroesToEnd method: " + arrayAlgorithms.moveZeroesToEnd());
       System.out.println(arrayAlgorithms);
+      // Testign notes 
+      /*
+      61, 17, 2, 39, 74, 73, 98, 54, 64, 54
+   findMax method: 98
+   hasDuplicates method: true
+   isInArray(10) method: false
+   longestContiguousSubarray method: 0
+   moveZeroesToEnd method: [I@53d8d10a
+   61, 17, 2, 39, 74, 73, 98, 54, 64, 54
+      */
    }
 }
