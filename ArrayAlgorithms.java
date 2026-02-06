@@ -120,6 +120,7 @@ public class ArrayAlgorithms {
       return intArray2;
    }
    
+   // Methods to make testing easier
    public String toString()
    {
       String resault = (intArray[0] + "");
@@ -128,6 +129,17 @@ public class ArrayAlgorithms {
          resault += (", " + intArray[i]);
       }
       return resault;
+   }
+   
+   public String printArray(int[] array)
+   {
+      String resault = (array[0] + "");
+      for(int i = 1; i < array.length; i++)
+      {
+         resault += (", " + array[i]);
+      }
+      return resault;
+
    }
 
    public static void main(String[] args) {
@@ -143,17 +155,6 @@ public class ArrayAlgorithms {
       System.out.println("isInArray(10) method: " + arrayAlgorithms.isInArray(10));
       // 4) If you are UWHS, also test the UWHS methods
       System.out.println("longestContiguousSubarray method: " + arrayAlgorithms.longestContiguousSubarray());
-      System.out.println("moveZeroesToEnd method: " + arrayAlgorithms.moveZeroesToEnd());
-      System.out.println(arrayAlgorithms);
-      // Testign notes 
-      /*
-      61, 17, 2, 39, 74, 73, 98, 54, 64, 54
-   findMax method: 98
-   hasDuplicates method: true
-   isInArray(10) method: false
-   longestContiguousSubarray method: 0
-   moveZeroesToEnd method: [I@53d8d10a
-   61, 17, 2, 39, 74, 73, 98, 54, 64, 54
-      */
+      System.out.println("moveZeroesToEnd method: " + arrayAlgorithms.printArray(arrayAlgorithms.moveZeroesToEnd()));
    }
 }
