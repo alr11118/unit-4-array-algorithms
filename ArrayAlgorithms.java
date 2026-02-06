@@ -114,12 +114,31 @@ public class ArrayAlgorithms {
       } 
       return intArray2;
    }
+   
+   public String toString()
+   {
+      String resault = (intArray[0] + "");
+      for(int i = 1; i < intArray.length; i++)
+      {
+         resault += (", " + intArray[i]);
+      }
+      return resault;
+   }
 
    public static void main(String[] args) {
       // REQUIRED:
       // 1) Create an ArrayAlgorithms object
+      ArrayAlgorithms arrayAlgorithms = new ArrayAlgorithms(10);
       // 2) Populate the array with random numbers
+      arrayAlgorithms.populateArrayWithRandom();
+      System.out.println(arrayAlgorithms);
       // 3) Call and print the result of EACH REQUIRED method
+      System.out.println("findMax method: " + arrayAlgorithms.findMax());
+      System.out.println("hasDuplicates method: " + arrayAlgorithms.hasDuplicates());
+      System.out.println("isInArray(10) method: " + arrayAlgorithms.isInArray(10));
       // 4) If you are UWHS, also test the UWHS methods
+      System.out.println("longestContiguousSubarray method: " + arrayAlgorithms.longestContiguousSubarray());
+      System.out.println("moveZeroesToEnd method: " + arrayAlgorithms.moveZeroesToEnd());
+      System.out.println(arrayAlgorithms);
    }
 }
