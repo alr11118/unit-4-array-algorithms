@@ -47,12 +47,13 @@ public class ArrayAlgorithms {
    public boolean hasDuplicates() {
       // REQUIRED: return true if there are duplicate values in the array
       // HINT: use a nested for loop
-      for(int i = 0; i < intArray.length; i++)
+      for(int i = 0; i < intArray.length - 1; i++)
       {
-         for(int j = 0; j < intArray.length; j++)
+         for(int j = i+1; j < intArray.length; j++)
          {
             if(intArray[j] == intArray[i])
             {
+               System.out.println(i + " " + j);
                return true;
             }
          }
@@ -79,7 +80,7 @@ public class ArrayAlgorithms {
       // UWHS ONLY:
       // Return the length of the longest strictly increasing contiguous segment
       int counter = 1;
-      int longestLength = 0;
+      int longestLength = 1;
       for(int i = 1; i < intArray.length; i++)
       {
          if(intArray[i] > intArray[i-1])
