@@ -92,7 +92,7 @@ public class ArrayAlgorithms {
          }
          else
          {
-            counter = 0;
+            counter = 1;
          }
       }
       return longestLength;
