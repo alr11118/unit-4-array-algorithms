@@ -25,8 +25,6 @@ public class ArrayListAlgorithms {
       {
          intArrayList.set(i, (int)(Math.random()*100));
       }
-      intArrayList.set(0, 23);
-      System.out.println(intArrayList.get(0));
    }
 
    public void populateArrayWithSequential(int startNum) {
@@ -113,9 +111,13 @@ public class ArrayListAlgorithms {
       // REQUIRED:
       // 1) Create an ArrayAlgorithms object
       ArrayListAlgorithms arrayListAlgorithms = new ArrayListAlgorithms();
+      ArrayListAlgorithms arrayListAlgorithms_sequence = new ArrayListAlgorithms();
       // 2) Populate the array with random numbers
       arrayListAlgorithms.populateArrayWithRandom();
       System.out.println(arrayListAlgorithms);
+      
+      arrayListAlgorithms_sequence.populateArrayWithSequential(1);
+      System.out.println(arrayListAlgorithms_sequence);
       // 3) Call and print the result of EACH REQUIRED method
       System.out.println("findMax method: " + arrayListAlgorithms.findMax());
       System.out.println("hasDuplicates method: " + arrayListAlgorithms.hasDuplicates());
