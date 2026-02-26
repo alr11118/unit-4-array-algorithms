@@ -53,7 +53,7 @@ public class ArrayAlgorithms {
          {
             if(intArray[j] == intArray[i])
             {
-               System.out.println(i + " " + j);
+               //System.out.println(i + " " + j);
                return true;
             }
          }
